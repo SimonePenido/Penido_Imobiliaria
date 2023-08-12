@@ -1,3 +1,7 @@
+:root{
+    --cor-fonte: #022601;
+}
+
 body {
     margin: 0;
     font-family: Tahoma;
@@ -31,8 +35,16 @@ body {
 
 .paragrafo-topo {
     text-align: center;
+    padding: 0px;
     margin-top: 15px;
     margin-bottom: 25px;
+    letter-spacing:.1em;
+}
+
+.paragrafo-topo a:hover{
+    background-color: color-mix(in srgb, var(--cor-fonte), #ffffff 80%);
+    padding: .2em;
+    border-radius: 5px;
 }
 
 .link-topo {
@@ -41,10 +53,6 @@ body {
     text-decoration: none;
     margin: 0 15px;
     text-transform: uppercase;
-}
-
-.link-topo a:hover{
-    background-color: color-mix(in srgb, #022601, #ffffff 30%);
 }
 
 .banner {
@@ -115,11 +123,11 @@ h3 {
 
 .paragrafo-contato {
     color: #fff;
-    background-color: #1d1d1d;
+    background-color: #040c03;
     padding: 15px;
     margin: 30px auto;
     text-align: center;
-    width: 980px;
+    width: 900px;
 }
 
 .link{
@@ -129,21 +137,22 @@ h3 {
     font-weight: bold; 
 }
 
-.link a:hover{
-    background-color: color-mix(in srgb, #022601, #ffffff 30%);
+#corretores a:hover{
+    background-color: color-mix(in srgb, var(--cor-fonte), #ffffff 80%);
+    padding: .2em;
+    border-radius: 5px;
 }
 
 .lista-contato {
-   width: 210px;
-   list-style: none;
-   margin: 40px auto 40px;
+    width: 210px;
+    list-style: none;
+    margin: 40px auto 40px;
 }
 
 .item-lista-contato {
     margin-top: 15px;
     text-align: center;
     font-size: 20px;
-    display: inline-block;
 }
 
 .link-contato {
@@ -154,7 +163,6 @@ h3 {
     font-weight: bold;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
 }
 
 .iframe {
