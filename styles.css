@@ -1,10 +1,14 @@
-:root{
+:root {
     --cor-fonte: #022601;
+    --cor-fundo: #146409;
+    --cor-clara: #ffffff;
+    --tamanho-fonte-padrao: 16px;
 }
 
 body {
     margin: 0;
     font-family: Tahoma;
+    font-size: var(--tamanho-fonte-padrao);
 }
 
 .secao {
@@ -14,11 +18,11 @@ body {
 }
 
 .paragrafo {
-    font-size: 22px;
+    font-size: 1.375rem; /* Equivalente a 22px */
     text-align: justify;
-    line-height: 28px;
-    margin: 30px auto;
-    width: 980px;
+    line-height: 1.75; /* Equivalente a 28px */
+    margin: 1.875rem auto; /* Equivalente a 30px */
+    width: 61.25rem; /* Equivalente a 980px */
 }
 
 .topo {
@@ -26,6 +30,8 @@ body {
 }
 
 .topo img {
+    display: flex;
+    margin: 0 auto;
     width: 200px;
 }
 
@@ -34,22 +40,28 @@ body {
 }  
 
 .paragrafo-topo {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    align-items: center;
+    font-size: 1.375rem; /* Equivalente a 22px */
     text-align: center;
-    padding: 0px;
+    padding: 18px;
     margin-top: 15px;
     margin-bottom: 25px;
     letter-spacing:.1em;
 }
 
 .paragrafo-topo a:hover{
-    background-color: color-mix(in srgb, var(--cor-fonte), #ffffff 80%);
+    background-color: color-mix(in srgb, var(--cor-fundo), #ffffff 60%);
     padding: .2em;
     border-radius: 5px;
 }
 
 .link-topo {
-    color: #022601;
-    font-size: 26px;
+    color: var(--cor-fonte);
+    font-size: 24px;
     text-decoration: none;
     margin: 0 15px;
     text-transform: uppercase;
@@ -60,48 +72,61 @@ body {
     margin-top: 50px;
 }
 
+
+
 span {
     font-weight: bold;
 }
 
 h1 {
-    color: #022601;
-    margin-bottom: 5px;
+    color: var(--cor-fonte);
+    margin-bottom: 0.3125rem; /* Equivalente a 5px */
+    font-size: 1.375rem; /* Equivalente a 22px */
+    text-transform: uppercase;
 }
 
 h2 {
-    font-weight: normal;
-    color: #022601;
+    font-size: 1.25rem; /* Equivalente a 20px */
+    color: var(--cor-fonte);
     margin-top: 0;
+    color: var(--cor-fundo);
 }
 
 .imagem {
     width: 600px;
     border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra sutil */
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
 }
 
+.imagem:hover {
+    transform: scale(1.05); /* Aumenta levemente o tamanho ao passar o mouse */
+    filter: brightness(1.1) contrast(1.1); /* Aumenta brilho e contraste ao passar o mouse */
+}
+
+
 .texto-verde {
-    color: #022601;
+    color: var(--cor-fonte);
 }
 
 .servicos, .contato {
-    background-color: #022601;
+    background-color: var(--cor-fonte)
 }
 
 h3 {
-    color: #ffffff;
+    color: var(--cor-clara);
     font-size: 28px;
     line-height: 42px;
 }
 
 .paragrafo-servicos {
-    color:#ffffff;
+    color:var(--cor-clara);
     line-height: 32px;
     width: 700px;
-    font-size: 22px;
+    font-size: 1.30rem;
     text-align: justify;
     margin: 10px auto;
-    width: 980px;
+    width: 57rem;
 }
 
 .texto-amarelo {
@@ -109,36 +134,37 @@ h3 {
 }
 
 .lista-servicos {
-    width: 135px;
-    margin: 40px auto 40px;
-    
+    width: 8.4375rem; /* Equivalente a 135px */
+    margin: 2.5rem auto 2.5rem; /* Equivalente a 40px */
 }
 
 .item-lista-servicos {
-    font-size: 22px;
-    line-height: 42px;
+    font-size: 1.25rem; /* Equivalente a 20px */
+    line-height: 1.75; /* Equivalente a 35px */
     text-align: left;
-    color: #fff;
+    color: var(--cor-clara);
 }
 
+
 .paragrafo-contato {
-    color: #fff;
+    color: var(--cor-clara);
     background-color: #040c03;
-    padding: 15px;
-    margin: 30px auto;
+    padding: 0.9375rem; /* Equivalente a 15px */
+    margin: 1.875rem auto; /* Equivalente a 30px */
     text-align: center;
-    width: 900px;
+    width: 56.25rem; /* Equivalente a 900px */
+    border-radius: 10px;
 }
 
 .link{
     text-transform: uppercase;
-    color: #022601;
+    color: var(--cor-fonte);
     text-decoration: none;
     font-weight: bold; 
 }
 
 #corretores a:hover{
-    background-color: color-mix(in srgb, var(--cor-fonte), #ffffff 80%);
+    background-color: color-mix(in srgb, var(--cor-fundo), #ffffff 80%);
     padding: .2em;
     border-radius: 5px;
 }
@@ -156,8 +182,8 @@ h3 {
 }
 
 .link-contato {
-    background-color: #ffffff;
-    color: #022601;
+    background-color: var(--cor-clara);
+    color: var(--cor-fonte);
     padding: 6px;
     border-radius: 5px;
     font-weight: bold;
@@ -165,6 +191,154 @@ h3 {
     text-decoration: none;
 }
 
+.lista-contato li a:hover{
+    background-color: color-mix(in srgb, var(--cor-fundo), #ffffff 20%);
+    padding: .2em;
+    border-radius: 5px;
+    color: var(--cor-clara);
+}
+
 .iframe {
     border-radius: 10px;
 }
+
+footer {
+    background-color: var(--cor-fonte);
+    color: var(--cor-clara);
+    text-align: center;
+    padding: 18px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 1em;
+    font-size: 1.1rem;
+}
+/* Estilos para telas grandes (mínimo de 1201px) */
+
+@media (min-width: 1201px) {
+    .lista-servicos {
+        width: 8.4375rem; /* Equivalente a 135px */
+    }
+    .paragrafo-topo {
+        font-size: 1.375rem; /* Mantendo o mesmo tamanho para telas grandes */
+    }
+    .paragrafo, .paragrafo-contato {
+        font-size: 1.375rem; /* Equivalente a 22px */
+        width: 61.25rem; /* Equivalente a 980px */
+    }
+}
+
+/* Estilos para laptops (mínimo de 769px e máximo de 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    body {
+        font-size: 1.125rem; /* Equivalente a 18px */
+    }
+    .paragrafo-topo {
+        grid-template-columns: repeat(2, 1fr); /* Alterando para duas colunas em telas de laptops */
+        font-size: 1.125rem; /* Reduzindo o tamanho da fonte para laptops */
+    }
+    .lista-servicos {
+        width: 100%;
+        max-width: 25rem; /* Equivalente a 400px */
+        margin: 1.25rem auto; /* Equivalente a 20px */
+    }
+
+    .paragrafo,.paragrafo-contato {
+        font-size: 1.125rem; /* Reduzir o tamanho da fonte */
+        width: 90%; /* Ocupar 90% da largura disponível */
+        max-width: 800px; /* Limitar a largura máxima */
+        margin: 18px auto; /* Ajustar margens conforme necessário */
+    }
+
+    /* Ajustes para imagens responsivas */
+    .imagem-topo,
+    .imagem {
+        max-width: 100%;
+        height: auto;
+    }
+
+    footer {
+        background-color: #022601;
+        color: #fff;
+        text-align: center;
+        position: relative;
+        padding: 20px;
+        width: 100%;
+    }
+
+    footer p {
+        margin: 1.1rem;
+        font-size: 14px;
+    }
+}
+
+/* Estilos para tablets (mínimo de 481px e máximo de 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+    body {
+        font-size: 1rem;
+    }
+    .lista-servicos {
+        width: 100%;
+        max-width: 18.75rem; /* Equivalente a 300px */
+        margin: 0.9375rem auto; /* Equivalente a 15px */
+    }
+    .paragrafo-topo {
+        grid-template-columns: repeat(1, 1fr); /* Uma coluna para telas de tablets */
+        font-size: 1rem; /* Reduzindo ainda mais o tamanho da fonte para tablets */
+    }
+
+    .paragrafo,.paragrafo-contato {
+        font-size: 16px; /* Reduzir ainda mais o tamanho da fonte */
+        width: 90%; /* Ocupar 90% da largura disponível */
+        max-width: 600px; /* Limitar a largura máxima */
+        margin: 15px auto; /* Ajustar margens conforme necessário */
+    }
+
+
+    /* Ajustes para imagens responsivas */
+    .imagem-topo,
+    .imagem {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+/* Estilos para telas pequenas (máximo de 480px) */
+@media (max-width: 480px) {
+    body {
+        font-size: 0.875rem; /* Equivalente a 14px */
+    }
+
+    .lista-servicos {
+        width: 100%;
+        max-width: 15.625rem; /* Equivalente a 250px */
+        margin: 0.625rem auto; /* Equivalente a 10px */
+    }
+    .paragrafo-topo {
+        grid-template-columns: repeat(1, 1fr); /* Uma coluna para telas pequenas */
+        font-size: 0.875rem; /* Reduzindo o tamanho da fonte para telas pequenas */
+    }
+
+    .paragrafo,.paragrafo-contato {
+        font-size: 14px; /* Reduzir ainda mais o tamanho da fonte */
+        width: 90%; /* Ocupar 90% da largura disponível */
+        max-width: 400px; /* Limitar a largura máxima */
+        margin: 10px auto; /* Ajustar margens conforme necessário */
+    }
+    /* Exemplo: ajuste o tamanho da fonte para telas pequenas */
+
+    /* Ajustes para imagens responsivas */
+    .imagem-topo,
+    .imagem {
+        max-width: 100%;
+        height: auto;
+    }
+    footer p {
+        margin: 16px;
+        font-size: 12px;
+    }
+}
+
